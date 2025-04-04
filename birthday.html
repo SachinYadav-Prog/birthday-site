@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birthday Surprise</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 🎵 Background Music -->
+  <audio id="bg-music" autoplay loop>
+    <source src="birthday.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Optional Music Control Button -->
+  <button class="music-btn" onclick="toggleMusic()">🎵 Play/Pause</button>
+
+  <!-- 🎉 Page 1 -->
+  <div id="page1" class="page">
+    <div class="decorations"></div>
+    <h1>🎉 Happy Birthday! 🎉</h1>
+    <p>Here's a little surprise for you!</p>
+    <button class="button" onclick="showPage2()">Here is Something For You</button>
+  </div>
+
+  <!-- 🎂 Page 2 -->
+  <div id="page2" class="page hidden">
+    <div class="decorations"></div>
+    <h1>🎈 Lets cut the cake 🎈</h1>
+    <img src="cake.png" id="cake" alt="Cake" onerror="this.src='fallback_cake.png'">
+    <div class="balloons-container">
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+    </div>
+    <button class="button" onclick="cutCake()">Cut the Cake</button>
+  </div>
+
+  <!-- 👀 Page 3 -->
+  <div id="page3" class="page hidden">
+    <h1>Want to see some memories?</h1>
+    <button class="button" onclick="showPhotos()">Show Photos</button>
+  </div>
+
+  <!-- 📸 Page 4 -->
+  <div id="photos" class="page hidden">
+    <h1>Memories & Wishes</h1>
+    <div class="photo-gallery">
+      <img src="memory1.jpg" alt="Memory">
+      <img src="memory2.jpg" alt="Memory">
+    </div>
+    <p>"May your day be filled with sunshine, your heart with joy, and your year with endless blessings.
+Here’s to the memories we’ve made and the many more to come.
+You deserve all the love, laughter, and cake this world can offer.
+Stay amazing — the world is brighter with you in it!" 🎂💖🎈"</p>
+<p>Jyada Photo thi nahi isliye ye dono hi laga di </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
